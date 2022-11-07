@@ -1,4 +1,4 @@
-package com.hm.backend;
+package com.inditex.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

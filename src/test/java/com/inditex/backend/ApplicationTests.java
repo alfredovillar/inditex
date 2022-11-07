@@ -1,4 +1,4 @@
-package com.hm.backend;
+package com.inditex.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
