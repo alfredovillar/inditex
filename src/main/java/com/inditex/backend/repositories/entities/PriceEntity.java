@@ -5,23 +5,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
+@Entity(name="PRICES")
+
 public class PriceEntity {
 
     @Id
     @Column(name="price_id")
     private Integer priceId;
-    @Column(name="brand_id")
-    private Integer brandId;
+    @ManyToOne
+    @JoinColumn(name="brand_id",referencedColumnName = "brand_id")
+    private BrandEntity brand;
     @Column(name="start_date")
 
     private LocalDateTime startDate;
@@ -40,5 +40,6 @@ public class PriceEntity {
     private Double price;
 
     private String curr;
+
 
 }
