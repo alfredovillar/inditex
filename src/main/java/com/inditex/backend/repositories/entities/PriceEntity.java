@@ -7,13 +7,19 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
-@Entity
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Entity
 public class PriceEntity {
+
+    @Id
+    @Column(name="price_id")
+    private Integer priceId;
     @Column(name="brand_id")
     private Integer brandId;
     @Column(name="start_date")
