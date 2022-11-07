@@ -12,13 +12,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="PRICES")
-
+@Entity(name="PRICE")
 public class PriceEntity {
 
     @Id
     @Column(name="price_id")
-    private Integer priceId;
+    private String priceId;
     @ManyToOne
     @JoinColumn(name="brand_id",referencedColumnName = "brand_id")
     private BrandEntity brand;
@@ -26,13 +25,10 @@ public class PriceEntity {
 
     private LocalDateTime startDate;
     @Column(name="end_date")
-
     private LocalDateTime endDate;
     @Column(name="price_list")
-
     private Integer priceList;
     @Column(name="product_id")
-
     private Integer productId;
 
     private Integer priority;

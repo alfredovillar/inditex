@@ -1,4 +1,4 @@
-package com.inditex.backend.repositories;
+package com.inditex.backend.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,10 +9,12 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PricesFilter {
+public class GetPricesResponse {
+
     private Integer productId;
     private Integer brandId;
-    private LocalDateTime date;
-
-
+    private Integer priceList;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
+    private Double price;
 }
